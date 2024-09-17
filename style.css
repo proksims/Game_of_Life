@@ -1,0 +1,104 @@
+:root {
+  --color: rgb(255, 255, 255);
+  --btn-color-bg1:rgb(240, 157, 226);
+  --btn-color-bg2:rgb(54, 170, 190);
+  --btn-color-bg3:rgb(245, 225, 241);
+  --btn-color-bg4:rgb(170, 215, 223);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inconsolata", monospace;
+  box-sizing: border-box;
+}
+
+html {
+  background: rgb(240, 240, 240);
+  font-size: 14px;
+  color: var(--color);
+   @media (max-width: 490px)  { 
+    font-size: 0.86rem;
+   }
+   @media (max-width: 390px)  { 
+    font-size: 0.72rem;
+   }
+}
+
+.container{
+  min-height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ================================= MAIN =============================== */
+.label{
+  max-width: 550px;
+  background: #504a50f1;
+  padding: 20px;
+}
+
+ul{
+  padding-left: 20px;
+}
+
+h1{
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--btn-color-bg1);
+}
+
+.btn{
+  border: none;
+  cursor: pointer;
+  font-size: var(--size);
+  height: 2rem;
+}
+
+.btn_container{
+  text-align: center;
+  padding: 10px 0;
+  button{
+    color: var(--color);
+    width: 3rem;
+    background: rgba(0, 0, 0, 0.212);
+    &:hover{
+      font-size: 1.05rem;
+      background: rgba(0, 0, 0, 0.082);
+    }
+    &:active{
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.082);
+    }
+  }
+}
+
+.restart{
+  text-align: center;
+  button{
+    width: 13.5rem;
+    background: var(--btn-color-bg1);
+    &:hover{
+      font-size: 1.05rem;
+      box-shadow: 0px 0px 0px 1px var(--btn-color-bg1);
+    }
+    &:active{
+      font-size: 1rem;
+    }
+  }
+}
+
+.game{
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
