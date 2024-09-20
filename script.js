@@ -39,11 +39,13 @@ function purple() {
 function lightBg() {
   console.log("light");
   colorBgMain = colorBgLight;
+  background(colorBgMain[0]);
 }
 
 function darkBg() {
   console.log("dark");
   colorBgMain = colorBgDark;
+  background(colorBgMain[0]);
 }
 
 // ********************* SPEED *******************************
@@ -141,10 +143,18 @@ function windowResized() {
 
 // ********************* MAIN *******************************
 function setup() {
-  createCanvas(600, 400);
+  if (windowWidth < 400) {
+    createCanvas(300, 400);
+  } else if (windowWidth < 500) {
+    createCanvas(400, 400);
+  } else if (windowWidth < 600) {
+    createCanvas(500, 400);
+  } else if (windowWidth >= 600) {
+    createCanvas(600, 400);
+  }
+  // createCanvas(600, 400);
   cols = width / size_life;
   rows = height / size_life;
-  // console.log(cols, rows, size_life);
   arr = makeArray(cols, rows);
   figRandom();
   // figGlider();
