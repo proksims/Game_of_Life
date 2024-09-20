@@ -1,104 +1,112 @@
 :root {
   --color: rgb(255, 255, 255);
-  --btn-color-bg1:rgb(240, 157, 226);
-  --btn-color-bg2:rgb(54, 170, 190);
-  --btn-color-bg3:rgb(245, 225, 241);
-  --btn-color-bg4:rgb(170, 215, 223);
-}
+  /* --colorPink1: rgb(223, 155, 212); */
+  --colorPink1: rgb(240, 157, 226);
+  --colorPink2: rgb(143, 186, 189);
+  --colorPink3: rgb(245, 225, 241);
+  --colorPurple1: rgb(122, 106, 212);
 
+  --colorLight: rgb(168, 168, 168);
+  --colorDark: rgb(8, 6, 6);
+}
 * {
   margin: 0;
   padding: 0;
   font-family: "Inconsolata", monospace;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
   background: rgb(240, 240, 240);
   font-size: 14px;
-  color: var(--color);
-   @media (max-width: 490px)  { 
+  @media (max-width: 490px) {
     font-size: 0.86rem;
-   }
-   @media (max-width: 390px)  { 
+  }
+  @media (max-width: 390px) {
     font-size: 0.72rem;
-   }
+  }
 }
 
-.container{
-  min-height: 100vh;
-  width: 100vw;
+.container {
   padding: 10px;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-
 /* ================================= MAIN =============================== */
-.label{
-  max-width: 550px;
-  background: #504a50f1;
-  padding: 20px;
+.label {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
-
-ul{
+ul {
   padding-left: 20px;
 }
-
-h1{
-  text-align: center;
-  font-size: 1.5rem;
-  color: var(--btn-color-bg1);
+.none li {
+  list-style-type: none;
 }
 
-.btn{
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--colorPink1);
+}
+span {
+  cursor: pointer;
+}
+
+.btn {
   border: none;
   cursor: pointer;
   font-size: var(--size);
   height: 2rem;
+  line-height: 2rem;
 }
 
-.btn_container{
+.btn_container {
   text-align: center;
-  padding: 10px 0;
-  button{
+  margin-top: 10px;
+  height: 3rem;
+  line-height: 3rem;
+  button {
     color: var(--color);
     width: 3rem;
     background: rgba(0, 0, 0, 0.212);
-    &:hover{
-      font-size: 1.05rem;
+    &:hover {
+      font-size: 1.1rem;
       background: rgba(0, 0, 0, 0.082);
     }
-    &:active{
+    &:active {
       font-size: 0.9rem;
       background: rgba(0, 0, 0, 0.082);
     }
   }
 }
 
-.restart{
+.figure {
   text-align: center;
-  button{
-    width: 13.5rem;
-    background: var(--btn-color-bg1);
-    &:hover{
+  /* height: 4rem;
+  line-height: 4rem; */
+  button {
+    width: 5rem;
+    background: var(--colorPink1);
+    &:hover {
       font-size: 1.05rem;
-      box-shadow: 0px 0px 0px 1px var(--btn-color-bg1);
+      box-shadow: 0px 0px 0px 1px var(--colorPink1);
     }
-    &:active{
+    &:active {
       font-size: 1rem;
     }
   }
 }
 
-.game{
-  width: 100vw;
-  min-height: 100vh;
-  position: absolute;
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.game {
+  /* padding: 20px 20px 0px 20px; */
+  text-align: center;
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.315); */
 }

@@ -5,49 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game of life</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="/favicon.ico">
   <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
 </head>
 
 <body>
-<div class="main_container">
-
-  <div class="game">
-    <main  >
-    </main> 
-  </div>
 
   <div class="container">
 
+  
     <div class="label">
-      <h1> Game of life </h1><br>
+      <h1>Game of life</h1><br>
+      <!-- Read: <a href="https://ru.wikipedia.org/wiki/Игра_«Жизнь»" target="_blank">Game of life</a> -->
 
       <p>
-        <strong style="color: var(--btn-color-bg2);">The game rules:</strong>
+        <strong style="color: var(--colorPink2);">You can change:</strong>
+        <ul class="none">
+          <li>Main color: <em><span style="color: var(--colorPink1);" onclick="pink()">pink</span>, <span style="color: var(--colorPurple1);" onclick="purple()">purple</span>.</em>
+          </li>
+          <li>Background color: <em><span style="color: var(--colorLight);" onclick="lightBg()">light</span>, <span style="color: var(--colorDark);" onclick="darkBg()">dark</span>.</em>
+          </li>
+          <li>Size: <em> <span  onclick="size5()">little</span>, <span onclick="size10()">LARGE</span>.</em>
+          </li>
+        </ul>
+        <br>
+
+        <!-- <strong style="color: var(--colorPink2);">The game rules:</strong>
         <ul>
           <li>A dead cell will come alive if exactly 3 neighbours are living;</li>
           <li>A living cell will stay alive if 2 or 3 neighbours are living;</li>
           <li>Cells with less than 2 neighbours will die of underpopulation, cells with 4 or more neighbours will die of overpopulation.</li>
         </ul>
-        <strong style="color: var(--btn-color-bg3);">If you want resizing the window, please refresh the page ❤</strong> <br>
-         <br> 
+        -->
       </p> 
-   
+
+ 
+  
+      <div class="figure">
+        <button class="btn" onclick="figRandom()">RANDOM</button>
+        <button class="btn" onclick="figGun()">GUN</button>
+        <button class="btn" onclick="figLong()">LIVER</button>
+        <button class="btn" onclick="figGlider()">POPULAR</button>
+        <!-- <button class="btn" onclick="restart()">BLASTER</button> -->
+      </div>
+
+
+      
+    </div>
+    <div class="game">
+      <main  >
+        <!-- canvas -->
+         
+      </main> 
+
       <div class="btn_container">
         <button class="btn" onclick="speedMin()"><<</button>
         <button class="btn" onclick="speedStop()">||</button>
         <button class="btn" onclick="speedPlay()">►</button>
         <button class="btn" onclick="speedMax()">>></button>
       </div>
-      
-      <div class="restart">
-        <button class="btn" onclick="restart()">RANDOM LIFE</button>
-      </div>
-
     </div>
-  </div>
 
-</div>
+
+  </div>
   <script src="script.js"></script>
 </body>
 
