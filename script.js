@@ -39,13 +39,11 @@ function purple() {
 function lightBg() {
   console.log("light");
   colorBgMain = colorBgLight;
-  background(colorBgMain[0]);
 }
 
 function darkBg() {
   console.log("dark");
   colorBgMain = colorBgDark;
-  background(colorBgMain[0]);
 }
 
 // ********************* SPEED *******************************
